@@ -19,6 +19,8 @@ Além disso, possui uma tela de detalhes da camiseta.
 
 ## Funcionalidades
 
+- Internacionalização (pt-Br e en-us)
+
 - Tela de Listagem de camisas
 
   - Listar camisas.
@@ -36,6 +38,7 @@ Além disso, possui uma tela de detalhes da camiseta.
 - JavaScript/TypeScript: Linguagem de programação interpretada estruturada.
 - Tailwind CSS: Estrutura CSS de código aberto.
 - Next.js: Estrutura da web de desenvolvimento front-end React.
+- Next-intl: Internacionalização.
 
 # Como rodar o projeto
 

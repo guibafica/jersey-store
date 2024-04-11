@@ -1,5 +1,5 @@
 - Criei o proeto com `npx create-next-app` e limpei os arquivos que eu não precisava;
-- Adicionei internacionalização, utilizando i18n. Já utilizei no meu website, e funciona super bem;
+- Adicionei internacionalização, utilizando next-intl. Já utilizei no meu website, e funciona super bem;
 
 https://docs.google.com/document/d/1mmtG0q4rvnXDM1sg-MF8HcJsk2Om7mN-5t1MkoNoKww/edit
 
