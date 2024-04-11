@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Jersey Store (Loja de camisas)</h1>
 
-## Getting Started
+<!-- ## Apresentação do projeto
 
-First, run the development server:
+<img
+  alt="Jersey Store"
+  title="Jersey Store' presentation gif"
+  src="./src/assets/presentationGif.gif"
+  height="425"
+/> -->
+
+## Sobre o projeto
+
+🏒 Seja bem vindo a Jersey Store, sua loja de camisas de hockey amigável 🏒
+
+Essa é uma aplicação web responsiva usando React, JavaScript, Tailwind CSS e Next.js.
+A aplicação apresenta uma lista de camisas de hockey (jersey).
+Além disso, possui uma tela de detalhes da camiseta.
+
+## Funcionalidades
+
+- Tela de Listagem de camisas
+
+  - Listar camisas.
+  - Incluir detalhes como imagem, nome, preço, tamanhos disponíveis e cores.
+  - Oferecer aos usuários a capacidade de filtrar os produtos por nome, preço, tamanho e cor.
+
+- Tela de detalhes da camisa
+  - Possibilidade de ser acessada via URL ou pela listagem de produtos.
+  - Apresentar a camisa selecionada.
+  - Permitir que o usuário mude o tamanho e cor da camiseta.
+
+# Tecnologias utilizadas
+
+- React: Biblioteca front-end JavaScript.
+- JavaScript/TypeScript: Linguagem de programação interpretada estruturada.
+- Tailwind CSS: Estrutura CSS de código aberto.
+- Next.js: Estrutura da web de desenvolvimento front-end React.
+
+# Como rodar o projeto
+
+Versão do node utilizada: v20.9.0
+
+## Aplicação
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Para instalar as dependências do projeto
+yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+# Executar a aplicação em localhost -> http://localhost:3000
+yarn dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Autor
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Made with 💜 by Guilherme Bafica 👋
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[![LinkedIn Badge](https://img.shields.io/badge/-GuilhermeBafica-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/guilhermebafica/)](https://www.linkedin.com/in/guilhermebafica/)
