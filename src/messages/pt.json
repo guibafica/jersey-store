@@ -11,5 +11,12 @@
 
   "productFilter": {
     "nameFilterPlaceholder": "Filtrar por nome"
+  },
+
+  "header": {
+    "discountMessage": "Promoção: 50% off em todos os produtos!",
+    "signInButton": "SIGN IN",
+    "myCartButton": "MEU CARRINHO",
+    "inputPlaceholder": "PESQUISAR"
   }
 }
