@@ -1,21 +1,18 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 
-import { JerseySection } from "../../components/JerseysList";
-import { ProductFilter } from "../../components/ProductFilter";
 import { Header } from "../../components/Header";
+import { Banner } from "../../components/Banner";
+import { TopSellers } from "../../components/TopSellers";
 
 export default function Home() {
   const t = useTranslations();
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24">
+    <div className="flex min-h-screen max-w-full overflow-hidden flex-col items-center justify-between p-24">
       <Header />
-
-      <h1>Lista de Camisetas</h1>
-
-      <ProductFilter />
-      <JerseySection />
+      <Banner />
+      <TopSellers />
     </div>
   );
 }

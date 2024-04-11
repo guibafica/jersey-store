@@ -1,7 +1,7 @@
 - Criei o proeto com `npx create-next-app` e limpei os arquivos que eu não precisava;
 - Adicionei internacionalização, utilizando next-intl. Já utilizei no meu website, e funciona super bem;
 - Criei components de listagem de camisas e comecei a estilizar
-
+- Continuei o desenvolvimento de cima pra baixo
 
 
 __________________________________________________________________________________

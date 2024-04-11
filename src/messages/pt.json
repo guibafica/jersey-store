@@ -4,6 +4,7 @@
     "whiteColor": "Branco",
     "blackColor": "Preto",
     "orangeColor": "Laranja",
+    "redColor": "Vermelho",
 
     "availableSizes": "Tamanhos disponíveis",
     "availableColors": "Cores"
@@ -17,6 +18,15 @@
     "discountMessage": "Promoção: 50% off em todos os produtos!",
     "signInButton": "SIGN IN",
     "myCartButton": "MEU CARRINHO",
-    "inputPlaceholder": "PESQUISAR"
+    "inputPlaceholder": "PESQUISAR",
+    "moreTeams": "Outros times"
+  },
+
+  "banner": {
+    "season": "A temporada está aberta!"
+  },
+
+  "topSellers": {
+    "title": "Mais Vendidos"
   }
 }
