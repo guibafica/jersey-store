@@ -1,3 +1,15 @@
 {
-  "test": "PORTUGUES"
+  "jerseysList": {
+    "blueColor": "Azul",
+    "whiteColor": "Branco",
+    "blackColor": "Preto",
+    "orangeColor": "Laranja",
+
+    "availableSizes": "Tamanhos disponíveis",
+    "availableColors": "Cores"
+  },
+
+  "productFilter": {
+    "nameFilterPlaceholder": "Filtrar por nome"
+  }
 }

@@ -1,3 +1,15 @@
 {
-  "test": "ENGLISH"
+  "jerseysList": {
+    "blueColor": "Blue",
+    "whiteColor": "White",
+    "blackColor": "Black",
+    "orangeColor": "Orange",
+
+    "availableSizes": "Available sizes",
+    "availableColors": "Colors"
+  },
+
+  "productFilter": {
+    "nameFilterPlaceholder": "Filter by name"
+  }
 }
