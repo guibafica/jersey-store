@@ -46,5 +46,17 @@
     "supportFAQ": "FAQ",
 
     "privacyPolicy": "Políticas de Privacidade"
+  },
+
+  "details": {
+    "price": "Preço",
+    "size": "Tamanho",
+    "quantity": "Quantidade",
+    "addToCart": "ADICIONAR AO CARRINHO",
+    "descriptionTitle": "DESCRIÇÃO",
+
+    "similarItemsTitle": "Produtos Similares",
+
+    "notFoundProductMessage": "Nenhum produto encontrado, tente novamente."
   }
 }

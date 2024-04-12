@@ -1,13 +1,20 @@
-import React from "react";
+"use client";
+import React, { useCallback, useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { FaAngleDown } from "react-icons/fa6";
 import { GiBrazilFlag, GiUsaFlag } from "react-icons/gi";
+import { useRouter, usePathname } from "next/navigation";
 
 import { Input } from "./Input";
 
 export const Header: React.FC = () => {
   const t = useTranslations("header");
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const [selectedLanguage, setSelectedLanguage] = useState<"en" | "pt">("pt");
 
   const popularTeams = [
     "MAPLE LEAFS",
@@ -17,15 +24,56 @@ export const Header: React.FC = () => {
     t("moreTeams"),
   ];
 
+  const handleChangeLanguage = useCallback(
+    (language: "en" | "pt") => {
+      if (pathname.includes("details")) {
+        router.push(`/${language}/details/${pathname.split("/details/")[1]}`);
+      } else {
+        router.push(`/${language}`);
+      }
+    },
+    [router, pathname]
+  );
+
+  const handleClickOnLanguageOption = useCallback(
+    (language: "en" | "pt") => {
+      handleChangeLanguage(language);
+      setSelectedLanguage(language);
+    },
+    [handleChangeLanguage]
+  );
+
+  const loadData = useCallback(() => {
+    setSelectedLanguage(pathname.split("/")[1] as "pt" | "en");
+  }, [pathname]);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
+
   return (
     <div className="w-full absolute top-0 flex items-start flex-col">
       <div className="w-full h-10 bg-gray-900 justify-between flex-row flex px-20 items-center  max-lg:flex-col max-lg:h-auto max-lg:py-2 max-sm:px-4">
         <div className="flex justify-between items-center gap-4 h-full max-lg:justify-start max-lg:w-full">
-          <button className="flex justify-center items-center border-2 border-blue-800 rounded-sm h-4/5 w-10 hover:bg-gray-500/50">
+          <button
+            onClick={() => handleClickOnLanguageOption("pt")}
+            className={`flex justify-center items-center ${
+              selectedLanguage === "pt"
+                ? "border-2 border-blue-800"
+                : "border-0"
+            }  rounded-sm h-4/5 w-10 hover:bg-gray-500/50`}
+          >
             <GiBrazilFlag color="#ffffff" size={28} />
           </button>
 
-          <button className="flex justify-center items-center border-0 border-blue-800 rounded-sm h-4/5 w-10 hover:bg-gray-500/50">
+          <button
+            onClick={() => handleClickOnLanguageOption("en")}
+            className={`flex justify-center items-center ${
+              selectedLanguage === "en"
+                ? "border-2 border-blue-800"
+                : "border-0"
+            }  rounded-sm h-4/5 w-10 hover:bg-gray-500/50`}
+          >
             <GiUsaFlag color="#ffffff" size={22} />
           </button>
         </div>
@@ -46,13 +94,15 @@ export const Header: React.FC = () => {
       </div>
 
       <div className="w-full h-24 bg-slate-950 justify-between flex-row flex px-20 items-center max-sm:flex-col max-sm:h-auto max-sm:py-2 max-sm:px-4">
-        <Image
-          src="/hockeyStickLogo.png"
-          alt="Logo hockey stick"
-          width={70}
-          height={70}
-          className="max-sm:hidden"
-        />
+        <Link href="/">
+          <Image
+            src="/hockeyStickLogo.png"
+            alt="Logo hockey stick"
+            width={70}
+            height={70}
+            className="max-sm:hidden"
+          />
+        </Link>
 
         <Input />
       </div>

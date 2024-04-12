@@ -4,12 +4,59 @@
     "whiteColor": "White",
     "blackColor": "Black",
     "orangeColor": "Orange",
+    "redColor": "Red",
 
-    "availableSizes": "Available sizes",
+    "availableSizes": "Available Sizes",
     "availableColors": "Colors"
   },
 
   "productFilter": {
     "nameFilterPlaceholder": "Filter by name"
+  },
+
+  "header": {
+    "discountMessage": "Sale: 50% off on all products!",
+    "signInButton": "SIGN IN",
+    "myCartButton": "MY CART",
+    "inputPlaceholder": "SEARCH",
+    "moreTeams": "More Teams"
+  },
+
+  "banner": {
+    "season": "The season is open!"
+  },
+
+  "topSellers": {
+    "title": "Top Sellers"
+  },
+
+  "footer": {
+    "newsLetter": "NEWSLETTER",
+    "newsLetterText": "Join our newsletter to stay up-to-date with the latest news.",
+    "newsLetterButton": "JOIN",
+
+    "topTeamsTitle": "TOP TEAMS",
+    "topTeamsMapleLeafs": "Toronto Maple Leafs",
+    "topTeamsOilers": "Edmonton Oilers",
+    "topTeamsPenguins": "Pittsburgh Penguins",
+
+    "supportTitle": "SUPPORT",
+    "supportHelp": "Help",
+    "supportContact": "Contact Us",
+    "supportFAQ": "FAQ",
+
+    "privacyPolicy": "Privacy Policy"
+  },
+
+  "details": {
+    "price": "Price",
+    "size": "Size",
+    "quantity": "Quantity",
+    "addToCart": "ADD TO CART",
+    "descriptionTitle": "DESCRIPTION",
+
+    "similarItemsTitle": "Similar Products",
+
+    "notFoundProductMessage": "No products found, try again."
   }
 }

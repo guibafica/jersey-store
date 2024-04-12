@@ -1,9 +1,13 @@
+"use client";
 import React from "react";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 export const JerseySection: React.FC = () => {
   const t = useTranslations("jerseysList");
+  const pathname = usePathname();
 
   const jerseys = [
     {
@@ -51,8 +55,9 @@ export const JerseySection: React.FC = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-6 gap-x-12">
       {jerseys.map((jersey) => (
-        <div
+        <Link
           key={jersey.id}
+          href={`/${pathname.split("/")[1]}/details/${jersey.id}`}
           className="flex items-center justify-between flex-col p-4 rounded-sm h-80 w-56 shadow-right shadow-left shadow-lg bg-white cursor-pointer hover:shadow-xl hover:bg-slate-50"
         >
           <div className="flex items-center justify-center w-full h-1/2">
@@ -85,7 +90,7 @@ export const JerseySection: React.FC = () => {
           <div className="w-full mt-3">
             <p className="text-right text-blue-600">$ {jersey.price}</p>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );

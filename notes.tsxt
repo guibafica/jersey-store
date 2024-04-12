@@ -3,13 +3,10 @@
 - Criei components de listagem de camisas e comecei a estilizar
 - Continuei o desenvolvimento de cima pra baixo
 - Ajustes na responsividade
+- Finalização das traduções
+- Criação da pagina de detalhes
 
-
-
-[] -> responsividade;
-[] -> Tradução para ingles;
-[] -> tela de detalhes;
-[] -> Funcionalidade de trocar a linguagem;
+[] -> Funcionalidade de trocar a linguagem + perceber qual linguagem ta selecionada e alterar no jersey list;
 [] -> Filtros, pesquisar e demais funcionalidades no world;
 
 __________________________________________________________________________________
