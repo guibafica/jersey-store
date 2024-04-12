@@ -28,6 +28,10 @@ export default function DetailsId({ params }: { params: { id: number } }) {
   const [selectedColor, setSelectedColor] = useState(0);
 
   const [nameFilterState, setNameFilterState] = useState("");
+  const [colorFilterState, setColorFilterState] = useState<string>();
+  const [priceStartFilterState, setPriceStartFilterState] = useState<number>();
+  const [priceEndFilterState, setPriceEndFilterState] = useState<number>();
+  const [sizeFilterState, setSizeFilterState] = useState<string>();
 
   const loadData = useCallback(() => {
     const fakeAPIData: IFakeAPIDataProps[] = [
@@ -230,7 +234,15 @@ export default function DetailsId({ params }: { params: { id: number } }) {
           </div>
 
           <div className="w-full flex items-center justify-center">
-            <JerseySection nameFilter={nameFilterState} />
+            <JerseySection
+              filterOptions={{
+                nameFilter: nameFilterState,
+                colorFilter: colorFilterState,
+                priceStartFilter: priceStartFilterState,
+                priceEndFilter: priceEndFilterState,
+                sizeFilter: sizeFilterState,
+              }}
+            />
           </div>
         </div>
       )}

@@ -27,7 +27,19 @@
   },
 
   "topSellers": {
-    "title": "Top Sellers"
+    "title": "Top Sellers",
+    "filtersTitle": "Filter by: ",
+    "priceFilterTitle": "Price",
+    "sizeFilterTitle": "Size",
+    "sizeLabelOption": "Select",
+    "colorFilterTitle": "Color",
+    "BlackOption": "Black",
+    "WhiteOption": "White",
+    "BlueOption": "Blue",
+    "OrangeOption": "Orange",
+    "RedOption": "Red",
+    "GreenOption": "Green",
+    "cleanFilter": "CLEAN"
   },
 
   "footer": {

@@ -27,7 +27,20 @@
   },
 
   "topSellers": {
-    "title": "Mais Vendidos"
+    "title": "Mais Vendidos",
+
+    "filtersTitle": "Filtrar por: ",
+    "priceFilterTitle": "Preço",
+    "sizeFilterTitle": "Tamanho",
+    "sizeLabelOption": "Selecione",
+    "colorFilterTitle": "Cor",
+    "BlackOption": "Preto",
+    "WhiteOption": "Branco",
+    "BlueOption": "Azul",
+    "OrangeOption": "Laranja",
+    "RedOption": "Vermelho",
+    "GreenOption": "Verde",
+    "cleanFilter": "LIMPAR"
   },
 
   "footer": {

@@ -7,11 +7,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface IJerseySectionProps {
-  nameFilter: string;
+  filterOptions: {
+    nameFilter?: string;
+    priceStartFilter?: number;
+    priceEndFilter?: number;
+    sizeFilter?: string;
+    colorFilter?: string;
+  };
 }
 
 export const JerseySection: React.FC<IJerseySectionProps> = ({
-  nameFilter,
+  filterOptions,
 }) => {
   const t = useTranslations("jerseysList");
   const pathname = usePathname();
@@ -23,6 +29,7 @@ export const JerseySection: React.FC<IJerseySectionProps> = ({
       price: 98.99,
       sizes: ["S", "M", "L", "XL"],
       colors: [t("blueColor"), t("whiteColor"), t("blackColor")],
+      colorsForFilter: ["blue", "white", "black"],
       image: "/jerseyMapleLeafsPNG.png",
     },
     {
@@ -31,6 +38,7 @@ export const JerseySection: React.FC<IJerseySectionProps> = ({
       price: 129.99,
       sizes: ["S", "M", "L"],
       colors: [t("orangeColor"), t("blueColor")],
+      colorsForFilter: ["orange", "blue"],
       image: "/jerseyOilersPNG.png",
     },
     {
@@ -39,6 +47,7 @@ export const JerseySection: React.FC<IJerseySectionProps> = ({
       price: 200.0,
       sizes: ["M", "L"],
       colors: [t("whiteColor"), t("blueColor")],
+      colorsForFilter: ["blue", "white"],
       image: "/jerseyKrakenPNG.webp",
     },
     {
@@ -47,6 +56,7 @@ export const JerseySection: React.FC<IJerseySectionProps> = ({
       price: 68.9,
       sizes: ["S", "M", "L", "XL"],
       colors: [t("blackColor")],
+      colorsForFilter: ["black"],
       image: "/jerseyPenguins.png",
     },
     {
@@ -55,6 +65,7 @@ export const JerseySection: React.FC<IJerseySectionProps> = ({
       price: 81.94,
       sizes: ["S", "M", "XL"],
       colors: [t("whiteColor"), t("redColor")],
+      colorsForFilter: ["white", "red"],
       image: "/jerseyDevilsPNG.png",
     },
   ];
@@ -63,8 +74,7 @@ export const JerseySection: React.FC<IJerseySectionProps> = ({
 
   const applyNameFilter = useCallback(
     (text: string) => {
-      console.log();
-      if (text.length < 3) {
+      if (text === undefined || text.length < 3) {
         setJerseysData(jerseys);
 
         return;
@@ -79,13 +89,65 @@ export const JerseySection: React.FC<IJerseySectionProps> = ({
     [jerseys]
   );
 
+  const applyPriceFilter = useCallback(
+    (priceStart: number, priceEnd: number) => {
+      const filteredJerseysList = jerseysData.filter(
+        (jersey) => jersey.price >= priceStart && jersey.price <= priceEnd
+      );
+
+      setJerseysData(filteredJerseysList);
+    },
+    [jerseysData]
+  );
+
+  const applySizeFilter = useCallback(
+    (size: string) => {
+      if (size === undefined) {
+        setJerseysData(jerseys);
+
+        return;
+      }
+
+      const filteredJerseysList = jerseysData.filter((jersey) =>
+        jersey.sizes.includes(size)
+      );
+
+      setJerseysData(filteredJerseysList);
+    },
+    [jerseysData]
+  );
+
+  const applyColorFilter = useCallback(
+    (color: string) => {
+      if (color === undefined) {
+        setJerseysData(jerseys);
+
+        return;
+      }
+
+      const filteredJerseysList = jerseysData.filter((jersey) =>
+        jersey.colorsForFilter.includes(color)
+      );
+
+      setJerseysData(filteredJerseysList);
+    },
+    [jerseys, jerseysData]
+  );
+
   const loadData = useCallback(() => {
-    if (nameFilter) applyNameFilter(nameFilter);
-  }, [nameFilter]);
+    if (filterOptions.nameFilter) applyNameFilter(filterOptions.nameFilter);
+    if (filterOptions.priceStartFilter && filterOptions.priceEndFilter)
+      applyPriceFilter(
+        filterOptions.priceStartFilter,
+        filterOptions.priceEndFilter
+      );
+    if (filterOptions.sizeFilter) applySizeFilter(filterOptions.sizeFilter);
+    if (filterOptions.colorFilter) applyColorFilter(filterOptions.colorFilter);
+  }, [filterOptions]);
 
   useEffect(() => {
     loadData();
-  }, [loadData, nameFilter]);
+  }, [loadData, filterOptions]);
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-6 gap-x-12">

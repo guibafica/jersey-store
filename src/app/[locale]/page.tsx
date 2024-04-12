@@ -17,7 +17,11 @@ export default function Home() {
       <Header handleSearchProduct={(text) => setNameFilterState(text)} />
       <Banner />
 
-      <TopSellers nameFilter={nameFilterState} />
+      <TopSellers
+        filters={{
+          nameFilter: nameFilterState,
+        }}
+      />
 
       <Footer />
     </div>
