@@ -9,7 +9,9 @@
   height="425"
 />
 
-(Link para testar o projeto)[https://jerseystore-blue.vercel.app/en]
+## Live demo
+
+- Para testar o projeto final, [clique aqui.](https://jerseystore-blue.vercel.app/en)
 
 ## Sobre o projeto
 
