@@ -40,10 +40,10 @@ export const TopSellers: React.FC<ITopSellersProps> = ({ filters }) => {
         <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/2 h-px bg-slate-900"></div>
       </div>
 
-      <div className="w-full flex flex-row items-top justify-end mb-4">
+      <div className="w-full flex flex-row justify-end mb-4 max-md:flex-col max-md:items-end max-md:gap-4">
         <h1 className="font-medium">{t("filtersTitle")}</h1>
 
-        <div className="ml-4">
+        <div className="ml-4 max-md:flex max-md:items-end max-md:w-full max-md:flex-col">
           <h1>{t("priceFilterTitle")}</h1>
 
           <div>
@@ -65,7 +65,7 @@ export const TopSellers: React.FC<ITopSellersProps> = ({ filters }) => {
           </div>
         </div>
 
-        <div className="ml-4">
+        <div className="ml-4 max-md:flex max-md:items-end max-md:w-full max-md:flex-col">
           <h1>{t("sizeFilterTitle")}</h1>
 
           <div>
@@ -88,7 +88,7 @@ export const TopSellers: React.FC<ITopSellersProps> = ({ filters }) => {
           </div>
         </div>
 
-        <div className="ml-4">
+        <div className="ml-4 max-md:flex max-md:items-end max-md:w-full max-md:flex-col">
           <h1>{t("colorFilterTitle")}</h1>
 
           <div>
