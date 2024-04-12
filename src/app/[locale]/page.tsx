@@ -15,10 +15,8 @@ export default function Home() {
       <Banner />
 
       <TopSellers />
-      {/* 
 
-
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }

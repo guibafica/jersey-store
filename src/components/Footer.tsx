@@ -18,9 +18,9 @@ export const Footer: React.FC = () => {
 
   return (
     <div className="w-full flex items-start flex-col mt-20">
-      <div className="w-full bg-black px-20 pt-6 pb-16">
-        <div className="flex-row flex justify-between items-start">
-          <div className="flex flex-col justify-start items-start w-1/5">
+      <div className="w-full bg-black px-20 pt-6 pb-16 max-sm:px-4">
+        <div className="flex-row flex justify-between items-start max-md:flex-col max-md:items-center max-md:gap-8">
+          <div className="flex flex-col justify-start items-start w-1/5 max-md:w-full max-md:justify-center max-md:items-center">
             <h1 className="text-white font-semibold text-2xl">
               {t("newsLetter")}
             </h1>
@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
             </button>
           </div>
 
-          <div className="flex flex-col justify-start items-start w-1/4">
+          <div className="flex flex-col justify-start items-start w-1/4 max-md:w-full max-md:justify-center max-md:items-center">
             <h1 className="text-white font-semibold text-2xl mb-4">
               {t("topTeamsTitle")}
             </h1>
@@ -40,14 +40,14 @@ export const Footer: React.FC = () => {
             {topTeamsOptions.map((team, teamIndex) => (
               <button
                 key={`${teamIndex} - ${team}`}
-                className="w-full text-left font-light text-white hover:text-gray-300 hover:font-normal"
+                className="w-full text-left font-light text-white hover:text-gray-300 hover:font-normal max-md:text-center"
               >
                 {team}
               </button>
             ))}
           </div>
 
-          <div className="flex flex-col justify-start items-start w-1/4">
+          <div className="flex flex-col justify-start items-start w-1/4 max-md:w-full max-md:justify-center max-md:items-center">
             <h1 className="text-white font-semibold text-2xl mb-4">
               {t("supportTitle")}
             </h1>
@@ -55,14 +55,14 @@ export const Footer: React.FC = () => {
             {supportOptions.map((option, optionIndex) => (
               <button
                 key={`${optionIndex} - ${option}`}
-                className="w-full text-left font-light text-white hover:text-gray-300 hover:font-normal"
+                className="w-full text-left font-light text-white hover:text-gray-300 hover:font-normal max-md:text-center"
               >
                 {option}
               </button>
             ))}
           </div>
 
-          <div className="flex flex-col justify-start items-start w-1/4">
+          <div className="flex flex-col justify-start items-start w-1/4 max-md:w-full max-md:justify-center max-md:items-center">
             <div className="w-full flex flex-row justify-start items-start gap-4">
               <FaInstagram color="#ffff" size={24} className="cursor-pointer" />
               <FaFacebook color="#ffff" size={24} className="cursor-pointer" />
@@ -79,7 +79,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="w-full border-t border-gray-200 mt-14 flex flex-row items-center justify-between pt-4">
+        <div className="w-full border-t border-gray-200 mt-14 flex flex-row items-center justify-between pt-4 max-md:w-full max-md:justify-center max-md:flex-col">
           <h1 className="text-white font-light text-xs">
             Copyright 2024 | Powered by Bafica
           </h1>
