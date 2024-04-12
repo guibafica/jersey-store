@@ -6,7 +6,7 @@ export const Input: React.FC = () => {
   const t = useTranslations("header");
 
   return (
-    <div className="bg-white flex items-center flex-row content-between">
+    <div className="bg-white flex items-center flex-row content-between max-sm:w-full">
       <input
         type="text"
         placeholder={t("inputPlaceholder")}

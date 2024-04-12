@@ -12,7 +12,8 @@ export default function Home() {
   return (
     <div className="flex min-h-screen max-w-full overflow-hidden flex-col items-center justify-between pt-24">
       <Header />
-      {/* <Banner />
+      <Banner />
+      {/* 
 
       <TopSellers />
 

@@ -19,8 +19,8 @@ export const Header: React.FC = () => {
 
   return (
     <div className="w-full absolute top-0 flex items-start flex-col">
-      <div className="w-full h-10 bg-gray-900 justify-between flex-row flex px-20 items-center">
-        <div className="flex justify-between items-center gap-4 h-full">
+      <div className="w-full h-10 bg-gray-900 justify-between flex-row flex px-20 items-center  max-lg:flex-col max-lg:h-auto max-lg:py-2 max-sm:px-4">
+        <div className="flex justify-between items-center gap-4 h-full max-lg:justify-start max-lg:w-full">
           <button className="flex justify-center items-center border-2 border-blue-800 rounded-sm h-4/5 w-10 hover:bg-gray-500/50">
             <GiBrazilFlag color="#ffffff" size={28} />
           </button>
@@ -30,9 +30,11 @@ export const Header: React.FC = () => {
           </button>
         </div>
 
-        <h1 className="text-white">{t("discountMessage")}</h1>
+        <h1 className="text-white max-lg:-mt-2 max-lg:text-center max-sm:mt-2">
+          {t("discountMessage")}
+        </h1>
 
-        <div className="h-full gap-1 flex">
+        <div className="h-full gap-1 flex max-lg:w-full max-lg:justify-end max-lg:mt-4 max-sm:justify-center">
           <button className="h-full bg-blue-800 px-5 border-0 text-white hover:bg-blue-900">
             {t("signInButton")}
           </button>
@@ -43,18 +45,19 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      <div className="w-full h-24 bg-slate-950 justify-between flex-row flex px-20 items-center">
+      <div className="w-full h-24 bg-slate-950 justify-between flex-row flex px-20 items-center max-sm:flex-col max-sm:h-auto max-sm:py-2 max-sm:px-4">
         <Image
           src="/hockeyStickLogo.png"
           alt="Logo hockey stick"
           width={70}
           height={70}
+          className="max-sm:hidden"
         />
 
         <Input />
       </div>
 
-      <div className="w-full h-7 mt-1 bg-slate-950 justify-center flex-row flex items-center gap-1">
+      <div className="w-full h-7 mt-1 bg-slate-950 justify-center flex-row flex items-center gap-1 max-md:hidden">
         {popularTeams.map((team, teamIndex) => (
           <button
             key={`${teamIndex} - ${team}`}

@@ -39,6 +39,7 @@ Além disso, possui uma tela de detalhes da camiseta.
 - Tailwind CSS: Estrutura CSS de código aberto.
 - Next.js: Estrutura da web de desenvolvimento front-end React.
 - Next-intl: Internacionalização.
+- React-icons: Lib para ícones.
 
 # Como rodar o projeto
 
