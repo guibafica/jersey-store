@@ -28,5 +28,23 @@
 
   "topSellers": {
     "title": "Mais Vendidos"
+  },
+
+  "footer": {
+    "newsLetter": "NOTÍCIAS",
+    "newsLetterText": "Ingresse no nosso boletim de notícias para ficar por dentro das ultimas novidades.",
+    "newsLetterButton": "INGRESSAR",
+
+    "topTeamsTitle": "TOP TIMES",
+    "topTeamsMapleLeafs": "Toronto Maple Leafs",
+    "topTeamsOilers": "Edmonton Oilers",
+    "topTeamsPenguins": "Pittsburgh Penguins",
+
+    "supportTitle": "SUPORTE",
+    "supportHelp": "Ajuda",
+    "supportContact": "Contate-nos",
+    "supportFAQ": "FAQ",
+
+    "privacyPolicy": "Políticas de Privacidade"
   }
 }
