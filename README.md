@@ -9,6 +9,8 @@
   height="425"
 />
 
+[https://jerseystore-blue.vercel.app/en](Link para testar o projeto)
+
 ## Sobre o projeto
 
 🏒 Seja bem vindo a Jersey Store, sua loja de camisas de hockey amigável 🏒
