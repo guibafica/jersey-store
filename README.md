@@ -1,13 +1,13 @@
 <h1 align="center">Jersey Store (Loja de camisas)</h1>
 
-<!-- ## Apresentação do projeto
+## Apresentação do projeto
 
 <img
   alt="Jersey Store"
   title="Jersey Store' presentation gif"
   src="./src/assets/presentationGif.gif"
   height="425"
-/> -->
+/>
 
 ## Sobre o projeto
 
