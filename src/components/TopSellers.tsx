@@ -3,7 +3,11 @@ import { useTranslations } from "next-intl";
 
 import { JerseySection } from "./JerseysList";
 
-export const TopSellers: React.FC = () => {
+interface ITopSellersProps {
+  nameFilter: string;
+}
+
+export const TopSellers: React.FC<ITopSellersProps> = ({ nameFilter }) => {
   const t = useTranslations("topSellers");
 
   return (
@@ -19,7 +23,7 @@ export const TopSellers: React.FC = () => {
       </div>
 
       <div className="w-full flex items-center justify-center">
-        <JerseySection />
+        <JerseySection nameFilter={nameFilter} />
       </div>
     </div>
   );

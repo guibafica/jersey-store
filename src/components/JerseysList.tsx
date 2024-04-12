@@ -1,11 +1,18 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
-import React from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-export const JerseySection: React.FC = () => {
+interface IJerseySectionProps {
+  nameFilter: string;
+}
+
+export const JerseySection: React.FC<IJerseySectionProps> = ({
+  nameFilter,
+}) => {
   const t = useTranslations("jerseysList");
   const pathname = usePathname();
 
@@ -52,9 +59,37 @@ export const JerseySection: React.FC = () => {
     },
   ];
 
+  const [jerseysData, setJerseysData] = useState(jerseys);
+
+  const applyNameFilter = useCallback(
+    (text: string) => {
+      console.log();
+      if (text.length < 3) {
+        setJerseysData(jerseys);
+
+        return;
+      }
+
+      const filteredJerseysList = jerseys.filter((jersey) =>
+        jersey.name.toLocaleLowerCase().includes(text.toLowerCase())
+      );
+
+      setJerseysData(filteredJerseysList);
+    },
+    [jerseys]
+  );
+
+  const loadData = useCallback(() => {
+    if (nameFilter) applyNameFilter(nameFilter);
+  }, [nameFilter]);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData, nameFilter]);
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-6 gap-x-12">
-      {jerseys.map((jersey) => (
+      {jerseysData.map((jersey) => (
         <Link
           key={jersey.id}
           href={`/${pathname.split("/")[1]}/details/${jersey.id}`}

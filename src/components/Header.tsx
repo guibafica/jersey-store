@@ -9,7 +9,11 @@ import { useRouter, usePathname } from "next/navigation";
 
 import { Input } from "./Input";
 
-export const Header: React.FC = () => {
+interface IHeaderProps {
+  handleSearchProduct: (text: string) => void;
+}
+
+export const Header: React.FC<IHeaderProps> = ({ handleSearchProduct }) => {
   const t = useTranslations("header");
   const router = useRouter();
   const pathname = usePathname();
@@ -104,7 +108,7 @@ export const Header: React.FC = () => {
           />
         </Link>
 
-        <Input />
+        <Input onChange={(text) => handleSearchProduct(text)} />
       </div>
 
       <div className="w-full h-7 mt-1 bg-slate-950 justify-center flex-row flex items-center gap-1 max-md:hidden">

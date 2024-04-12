@@ -27,6 +27,8 @@ export default function DetailsId({ params }: { params: { id: number } }) {
   const [selectedJersey, setSelectedJersey] = useState<IFakeAPIDataProps>();
   const [selectedColor, setSelectedColor] = useState(0);
 
+  const [nameFilterState, setNameFilterState] = useState("");
+
   const loadData = useCallback(() => {
     const fakeAPIData: IFakeAPIDataProps[] = [
       {
@@ -100,7 +102,7 @@ export default function DetailsId({ params }: { params: { id: number } }) {
 
   return (
     <div className="flex min-h-screen max-w-full overflow-hidden flex-col items-center justify-between pt-24">
-      <Header />
+      <Header handleSearchProduct={(text) => setNameFilterState(text)} />
 
       {selectedJersey && (
         <div className="px-20 max-sm:px-4">
@@ -228,7 +230,7 @@ export default function DetailsId({ params }: { params: { id: number } }) {
           </div>
 
           <div className="w-full flex items-center justify-center">
-            <JerseySection />
+            <JerseySection nameFilter={nameFilterState} />
           </div>
         </div>
       )}
