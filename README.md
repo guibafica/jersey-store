@@ -9,7 +9,7 @@
   height="425"
 />
 
-[https://jerseystore-blue.vercel.app/en](Link para testar o projeto)
+(Link para testar o projeto)[https://jerseystore-blue.vercel.app/en]
 
 ## Sobre o projeto
 
